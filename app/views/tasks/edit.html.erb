@@ -1,0 +1,8 @@
+<div class="border-bottom p-3">
+  <h1>Edit <%= @task.title %></h1>
+  <%= render 'form', task: @task %>
+</div>
+
+<div class="p-3">
+  <%= link_to 'Back to list', tasks_path %>
+</div>

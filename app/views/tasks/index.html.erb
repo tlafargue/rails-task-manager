@@ -1,0 +1,17 @@
+<h1>My tasks</h1>
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+    <li class="list-group-item w-200">
+      <span style="padding-right: 5px;">
+        <% if task.completed %>
+          <i class="fa-regular fa-circle-check"></i>
+        <% else %>
+          <i class="fa-regular fa-circle"></i>
+        <% end %>
+      </span>
+      <%= link_to task.title, task_path(task) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add new task', tasks_new_path %>
